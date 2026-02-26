@@ -1,0 +1,78 @@
+#contenedor{
+ width: 900px;
+ margin:0 auto;
+ border:1px solid #000;
+ background-color: azure;
+}
+
+
+header{
+    width:100%;
+    border: 1px solid red;
+    height:100px;
+    display :flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+header img{
+    height: 100px;
+}
+
+header div{
+
+    padding-top: 30px;
+    height:70px;
+    
+    text-align: center;
+    width: 650px;
+}
+
+main{
+    width:100%;
+    display: flex;
+    
+}
+
+nav{
+    width: 150px;
+    background-color: bisque;
+    
+}
+
+aside{
+    width:750px;
+    background-color: cadetblue;
+}
+
+ul.menu{
+    list-style: none;
+    margin: 0;
+    padding: auto;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    
+    
+}
+
+ul.menu li{
+
+    display: inline-block;
+    width: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 0;
+    padding:0 ;
+    
+    margin-top: 10px;
+}
+
+
+ul.menu li a:hover{
+    background-color: rgb(199, 49, 49);
+    color: white;
+}
