@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    height: 600px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: Arial, sans-serif;
+}
+
+
+.tarjeta {
+    background-color: #ffffff;
+    width: 500px;
+    padding: 30px; 
+    margin: 20px;  
+    border: 1px solid #000000; 
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    margin-bottom: 15px;
+}
+
+
+header h1 {
+    margin: 10px 0;
+    color: black;
+}
+
+header p {
+    color: #000000;
+}
+
+.informacion p {
+    margin: 15px 0;
+    color: #444;
+}
+
+
+.informacion ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.informacion ul li {
+    background-color: #000000;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #513ae5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}

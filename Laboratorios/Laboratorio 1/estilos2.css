@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.header {
+    background-color: rgb(43, 43, 131);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.menu {
+    display: flex;
+    gap: 28px; 
+}
+
+.menu a {
+    color : white;
+    text-decoration: none;
+}
+
+.principal {
+    background-color: lightblue;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.principal button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(43, 43, 131);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.productos {
+    background-color: #f4f4f4;
+    padding: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+}
+
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 260px;
+    padding: 20px;   
+    margin: 10px;    
+    border: 1px solid gray;
+    border-radius: 8px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.tarjeta button {
+    padding: 8px 15px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    justify-content: center;
+
+}
+
+.tarjeta img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    
+}
+
+.tarjeta button:hover {
+    background-color: darkgreen;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
