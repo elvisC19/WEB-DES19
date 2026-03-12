@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta 2</title>
+    <style>
+     
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            margin: auto;
+        }
+
+        
+        .formulario {
+            border: 2px solid #F79646;
+            padding: 20px;
+            display: flex;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+            margin:auto;
+        }
+
+        select{
+            padding: 8px;
+            font-size: 16px;
+            border:1px solid #e5b36c;
+            border-radius: 4px;
+            
+
+        }
+
+        input[type="number"] {
+            padding: 8px;
+            font-size: 16px;
+            border:1px solid #e5b36c;
+            border-radius: 4px;
+            width: 80px;
+        }
+        
+        button {
+            background-color: #F79646;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 8px 20px;
+            border: 1px solid #e5b36c;
+            border-radius: 4px ;
+
+        }
+
+        
+        label {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        .fila-controles {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .fila-boton {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <form action="tabla.php" method="POST">
+        <div class="formulario">
+
+            <div class="fila-controles">
+               
+                <label for="operacion">operación</label>
+                <select name="operacion" id="operacion">
+                    <option value="Suma">Suma</option>
+                    <option value="Resta">Resta</option>
+                    <option value="Multiplicacion">Multiplicación</option>
+                    <option value="Division">División</option>
+                </select>
+
+                <label for="n">n</label>
+                <input type="number" name="n" id="n">
+            </div>
+
+            <div class="fila-boton">
+                <button type="submit">Generar</button>
+            </div>
+
+        </div>
+    </form>
+
+</body>
+</html>
