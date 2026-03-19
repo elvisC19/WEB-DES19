@@ -15,13 +15,16 @@ $nroC=$_GET["numeroC"];
 
     <style>
 
+        table{
+            border-collapse: collapse;
+            
+        }
+
 
       td{
         height: 50px;
         width: 200px;
-
-
-        
+        border: 1px solid black;
       }
 
     
@@ -51,24 +54,21 @@ $nroC=$_GET["numeroC"];
 echo"<table>";
 for($i=1;$i<=$nroF;$i++){
  echo"<tr>"; 
-    for($j=1;$j<=$nroC;$j++){
-        if(($i+$j)%3==0){
-            echo"<tr>";
-             echo"<td class='rojo'>&nbsp;</td>
-             <td class='rojo'>&nbsp;</td>";
-                echo"</tr>"; 
-        }elseif(($i+$j)%3==1){
-            echo"<tr>";
-             echo"<td class='amarillo'>&nbsp;</td>";
-              
-        }else{
-             echo"<td class='verde'>&nbsp;</td>"; 
-        }
+    if($i % 3 == 1){
+        $color="rojo";
+    }elseif($i % 3 == 2){
+        $color="amarillo";
+    }else{
+        $color="verde";
     }
-    echo"</tr>";    
+    
+    for($j=1;$j<=$nroC;$j++){
+        echo"<td class='$color'></td>";
+    }
+    echo"</tr>";
 }
 echo"</table>";
-?>
+?> 
 
 
 
