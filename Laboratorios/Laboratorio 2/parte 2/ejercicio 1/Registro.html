@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Estudiantil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        .contenedor-formularios {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .caja-form {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 25px;
+            width: 380px;
+        }
+
+        .caja-form h2 {
+            margin-top: 0;
+            color: #333;
+            border-left: 4px solid #555;
+            padding-left: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 7px;
+            margin-top: 4px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .grupo-radio,
+        .grupo-check {
+            margin-top: 4px;
+        }
+
+        .grupo-radio label,
+        .grupo-check label {
+            display: inline;
+            margin-left: 5px;
+            font-size: 14px;
+        }
+
+        .grupo-radio input,
+        .grupo-check input {
+            margin-top: 8px;
+        }
+
+        input[type="submit"] {
+            margin-top: 18px;
+            padding: 8px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Registro Estudiantil</h1>
+
+<div class="contenedor-formularios">
+
+   
+    <div class="caja-form">
+        <h2>Formulario POST</h2>
+
+        <form action="procesar.php" method="POST">
+
+            <label for="nombre_post">Nombre Completo:</label>
+            <input type="text" id="nombre_post" name="nombre">
+
+            <label for="email_post">Correo Electrónico:</label>
+            <input type="email" id="email_post" name="email">
+
+            <label for="carrera_post">Seleccionar Carrera:</label>
+            <select id="carrera_post" name="carrera">
+                <option value="">-- Seleccione --</option>
+                <option value="Sistemas">Sistemas</option>
+                <option value="Ciencias de la Computacion">Ciencias de la Computación</option>
+                <option value="Diseño Grafico">Diseño Gráfico</option>
+            </select>
+
+            <label for="semestre_post">Semestre Actual:</label>
+            <input type="number" id="semestre_post" name="semestre" min="1" max="10">
+
+            <label>Turno:</label>
+            <div class="grupo-radio">
+                <input type="radio" id="manana_post" name="turno" value="Mañana">
+                <label for="manana_post">Mañana</label>
+                <input type="radio" id="tarde_post" name="turno" value="Tarde">
+                <label for="tarde_post">Tarde</label>
+                <input type="radio" id="noche_post" name="turno" value="Noche">
+                <label for="noche_post">Noche</label>
+            </div>
+
+            <label>Materias de Interés:</label>
+            <div class="grupo-check">
+                <input type="checkbox" id="prog_post" name="materia[]" value="Programacion">
+                <label for="prog_post">Programación</label><br>
+                <input type="checkbox" id="ia_post" name="materia[]" value="Inteligencia Artificial">
+                <label for="ia_post">Inteligencia Artificial</label><br>
+                <input type="checkbox" id="bd_post" name="materia[]" value="Base de Datos">
+                <label for="bd_post">Base de Datos</label>
+            </div>
+
+            <label for="comen_post">Comentarios:</label>
+            <textarea id="comen_post" name="comentarios" rows="3"></textarea>
+
+            <input type="submit" value="Enviar con POST">
+
+        </form>
+    </div>
+
+
+    
+    <div class="caja-form">
+        <h2>Formulario GET</h2>
+
+        <form action="procesar.php" method="GET">
+
+            <label for="nombre_get">Nombre Completo:</label>
+            <input type="text" id="nombre_get" name="nombre">
+
+            <label for="email_get">Correo Electrónico:</label>
+            <input type="email" id="email_get" name="email">
+
+            <label for="carrera_get">Seleccionar Carrera:</label>
+            <select id="carrera_get" name="carrera">
+                <option value="">-- Seleccione --</option>
+                <option value="Sistemas">Sistemas</option>
+                <option value="Ciencias de la Computacion">Ciencias de la Computación</option>
+                <option value="Diseño Grafico">Diseño Gráfico</option>
+            </select>
+
+            <label for="semestre_get">Semestre Actual:</label>
+            <input type="number" id="semestre_get" name="semestre" min="1" max="10">
+
+            <label>Turno:</label>
+            <div class="grupo-radio">
+                <input type="radio" id="manana_get" name="turno" value="Mañana">
+                <label for="manana_get">Mañana</label>
+                <input type="radio" id="tarde_get" name="turno" value="Tarde">
+                <label for="tarde_get">Tarde</label>
+                <input type="radio" id="noche_get" name="turno" value="Noche">
+                <label for="noche_get">Noche</label>
+            </div>
+
+            <label>Materias de Interés:</label>
+            <div class="grupo-check">
+                <input type="checkbox" id="prog_get" name="materia[]" value="Programacion">
+                <label for="prog_get">Programación</label><br>
+                <input type="checkbox" id="ia_get" name="materia[]" value="Inteligencia Artificial">
+                <label for="ia_get">Inteligencia Artificial</label><br>
+                <input type="checkbox" id="bd_get" name="materia[]" value="Base de Datos">
+                <label for="bd_get">Base de Datos</label>
+            </div>
+
+            <label for="comen_get">Comentarios:</label>
+            <textarea id="comen_get" name="comentarios" rows="3"></textarea>
+
+            <input type="submit" value="Enviar con GET">
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

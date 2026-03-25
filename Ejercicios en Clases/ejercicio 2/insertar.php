@@ -2,4 +2,10 @@
 
 include("pila.php");
 
-$elementos = ["Elemento 1", "Elemento 2", "Elemento 3"];
+session_start();
+$elemento=$_GET["elemento"];
+if(!isset ($_SESSION["pila"])){
+    $_SESSION["pila"]=new Pila();
+}else{
+    $pila=$_SESSION["pila"];
+}           
