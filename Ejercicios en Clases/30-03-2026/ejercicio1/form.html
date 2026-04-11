@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            margin: 0;
+        }
+        form{
+            text-align: center;
+            justify-content: center;
+            padding: 60px;
+        }
+
+        label{
+            color: black;
+            padding: 10px;
+        }
+
+        input{
+            margin-top: 18px;
+        }
+
+        select{
+            margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="Carnet de identidad">Carnet de identidad</label>
+        <input type="number" placeholder="CI" name="ci">
+        <br>
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="nombre" name="nombre">
+        <br>
+        <label for="apellido paterno">Apellido Paterno</label>
+        <input type="text" placeholder="Apellido paterno" name="apellido_parterno">
+        <br>
+        <label for="apellido materno">Apellido Materno:</label>
+        <input type="text" placeholder="Apellido Materno" name="apellido_materno">
+        <br>
+        <label for="fecha de nacimiento">Fecha de nacimiento</label>
+        <input type="date" placeholder="fecha de nacimiento" name="fecha_nacimineto">
+        <br>
+        <label for="sexo">seleccione su sexo :</label>
+        <select name="sexo" id="sexo">
+            <option value="Mascu;ino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+        </select>
+        <br>
+       
+
+        <label for="numero de telefono">Nro de telefono: </label>
+        <input type="number"  name="numero de telefono">
+        <br>
+
+
+        <input type="submit" value="enviar datos">
+    </form>
+</body>
+</html>
