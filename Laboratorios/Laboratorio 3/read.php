@@ -89,7 +89,7 @@ while ($mascota = mysqli_fetch_array($consulta)) {
         <td><?php echo $mascota['especie']; ?></td>
         <td>
             <a href="form-editar.php?id=<?php echo $mascota['id']; ?>">Editar</a>
-            |
+            
             <a href="delete.php?id=<?php echo $mascota['id']; ?>">Eliminar</a>
         </td>
     </tr>
