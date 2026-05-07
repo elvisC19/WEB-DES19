@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 45px;
+            background-color: white;
+            color: black;
+            
+        }
+
+        h2 { 
+            margin-bottom: 15px;
+         }
+        p {
+             margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+            border-radius: 6px;
+        }
+       
+    </style>
+</head>
+<body id="pagina">
+
+    <h2>Mi sitio</h2>
+    <p>Este es un texto de demostración </p>
+    <button id="btn-modo" onclick="alternarModo()">Modo Oscuro</button>
+
+    <script>
+        function alternarModo() {
+             body = document.getElementById("pagina");
+             boton = document.getElementById("btn-modo");
+
+ 
+            var colorFondo = body.style.backgroundColor;
+
+            if (colorFondo == "black") {
+            
+                body.style.backgroundColor = "white";
+                body.style.color = "black";
+                boton.style.backgroundColor = "black";
+                boton.style.color = "white";
+                boton.style.borderColor = "black";
+                boton.textContent = "Modo Oscuro";
+            } else {
+              
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+                boton.style.backgroundColor = "white";
+                boton.style.color = "black";
+                boton.style.borderColor = "white";
+                boton.textContent = "Modo Claro";
+            }
+        }
+    </script>
+
+</body>
+</html>

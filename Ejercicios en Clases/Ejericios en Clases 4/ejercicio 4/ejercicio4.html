@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4 - Inspector de Enlaces</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; background: #f5f5f5; }
+        h2 { color: #333; }
+        .caja-enlaces {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            max-width: 500px;
+        }
+        a { 
+            color: #3674b3; 
+            font-size: 16px;
+         }
+        .url {
+            font-size: 13px;
+            color: #555;
+            margin: 4px 0 16px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Inspector de Enlaces</h2>
+
+    <div class="caja-enlaces" id="caja">
+        <p><strong>Mis enlaces favoritos</strong></p>
+        <a href="https://www.google.com">Buscador Google</a>
+        <a href="https://developer.mozilla.org">Documentación MDN</a>
+        <a href="https://usfx.bo/">Universidad USFX</a>
+    </div>
+
+    <script>
+      
+        enlaces = document.getElementsByTagName("a");
+
+        for (i = 0; i < enlaces.length; i++) {
+            enlace = enlaces[i];
+
+   
+            url = enlace.getAttribute("href");
+
+            
+            parrafo = document.createElement("p");
+            parrafo.textContent = "Este enlace te lleva a: " + url;
+            parrafo.className = "url";
+
+           
+            enlace.parentNode.insertBefore(parrafo, enlace.nextSibling);
+        }
+    </script>
+
+</body>
+</html>

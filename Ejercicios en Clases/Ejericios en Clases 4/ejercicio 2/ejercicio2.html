@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ejercicio 2</title>
+<style>
+      body{
+        font-family: Arial;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    .formulario{
+        background-color: white;
+        padding: 20px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    input{
+        padding: 8px;
+        margin-right: 10px;
+    }
+
+    button{
+        padding: 8px 15px;
+        background-color: #1976d2;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+    }
+
+    th{
+        background-color: #1976d2;
+        color: white;
+        padding: 10px;
+    }
+
+    td{
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .mayor{
+        background-color: #fff3cd;
+    }
+
+    .eliminar{
+        background-color: red;
+    }
+
+    #total{
+        color: red;
+        font-weight: bold;
+    }
+
+        
+</style>
+</head>
+<body>
+<h2>Sistema de Registro de Estudiantes</h2>
+
+<div class="formulario">
+
+    <input type="text" id="name" placeholder="Nombre">
+
+    <input type="number" id="age" placeholder="Edad">
+
+    <input type="text" id="carrera" placeholder="Carrera">
+
+    <button onclick="anadirAlumno()">
+        Agregar
+    </button>
+
+    <p id="total">
+        Total estudiantes registrados: 0
+    </p>
+
+</div>
+
+<table class="tabla">
+
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <p onmouseover="resaltar()">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut explicabo earum sint esse neque perspiciatis deleniti dolorem, velit suscipit aliquam minus incidunt perferendis, iure deserunt nisi? Magni assumenda aspernatur numquam.</p>
+    <p onmouseover="resaltar()">Possimus perspiciatis corrupti consectetur quo ipsa quasi illo delectus quae veniam! Sed quae eaque a dolor aliquid, ea iste esse fugiat ipsum, quaerat facere, quas molestiae deserunt distinctio asperiores accusantium?</p>
+    <p onmouseover="resaltar()">Aspernatur repellendus debitis odio quo, atque at blanditiis dignissimos rem molestiae consequatur omnis voluptates deserunt ea aliquam nesciunt quam nam, sed laborum. Maiores ipsum qui at nostrum, id illo dolorum?</p>
+    <p onmouseover="resaltar()">Nihil aperiam unde explicabo laborum architecto at et, tempore optio. Recusandae, veniam consectetur? Sapiente accusamus dolorum, rem consequatur voluptatum aperiam commodi ullam maiores, enim vitae voluptatibus, velit quibusdam? At, saepe?</p>
+    <p onmouseover="resaltar()">Voluptates odit molestias obcaecati reprehenderit modi sit ut, fuga tempora quisquam itaque. Doloremque dignissimos, ullam debitis, atque voluptatibus praesentium maiores nulla et, laboriosam consectetur sapiente molestias error illum unde ratione!</p>
+
+        <button onclick="contar()">Calular</button>
+        <input type="color" id="color">
+
+        <script>
+
+            function contar(){
+                var parrafos= document.getElementsByTagName('p');
+                alert(parrafos.length);
+                console.log(parrafos)
+
+                let color = document.getElementById('color').value ;
+                document.getElementsByTagName('body')[0].style.backgroundColor=color;
+
+            }
+            
+
+            function resaltar(){
+
+                //var parrafos = document.getElementsByTagName('p');
+                //parrafos.array.forEach(elemento =>{
+                  //  elemento.style.color='red';
+                   // elemento.style.fontWeight='bold';
+
+                //});
+
+                let parrafos = Array.from(document.getElementsByTagName('p'));
+                parrafos.forEach(elemento => {
+                    elemento.style.color='red';
+                    elemento.style.fontWeight='bold';
+    
+                });
+
+                
+
+
+
+            }
+        </script>
+</body>
+</html>

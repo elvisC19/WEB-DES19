@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quaerat, voluptate cumque ratione deleniti molestias officia incidunt adipisci. Quis totam, a dolore iusto nesciunt quibusdam nulla voluptatibus ducimus id tenetur.</p>
+    <p>Iusto maiores officiis, atque dolorum cupiditate saepe accusantium eaque! Culpa maxime iste cupiditate aperiam itaque, labore ullam? Laborum in, dolorum assumenda excepturi a corporis ut libero cumque laudantium magnam laboriosam?</p>
+    <p onmouseover="resaltar(this)">Voluptatibus saepe architecto totam quibusdam sint dolorem laudantium, nulla, porro numquam quod quasi? Unde itaque perferendis dolorum obcaecati est accusamus rerum ea optio distinctio? Temporibus dolore maiores sunt non accusamus?</p>
+    <p>Eum, beatae sapiente corporis, reiciendis impedit libero laborum repellat repudiandae maiores saepe dolorum? Esse alias, accusamus fugiat numquam quas nostrum eos nulla dignissimos quaerat amet voluptatum dolores autem animi quo.</p>
+    <p>Nisi quam fugit dolore, fuga voluptas distinctio iste? Ducimus aperiam qui officia earum, maiores quidem aliquam at blanditiis eius nulla quae culpa dolorem doloremque porro reprehenderit tenetur magnam saepe libero!</p>
+    <input type="color" name="color" id="color">
+    
+    
+
+    <button onclick="contar()">Contar</button>
+    <script>
+        function contar(){
+            var parrafo= document.querySelectorAll('p');
+            alert(parrafo.length);
+            document.querySelector('body').style.backgroundColor=document.querySelector("input[type='color']").value;
+        }
+
+        function resaltar(){
+            var parrafo=document.querySelector('p');
+            parrafo.style.color='red';
+            parrafo.style.fontweight='bold';
+        }
+    </script>
+    
+
+</body>
+</html>
