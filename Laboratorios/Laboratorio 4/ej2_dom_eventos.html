@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 200px;
+        height: auto;
+        margin-top: 20px;
+    }
+    
+</style>
+<body>
+
+    <div id="panel">
+        <h3>Panel de Control</h3>
+        <p id="colorActual">Color actual: Amarillo</p>
+        <p id="cont">Clics: 0</p>
+       
+        <button id="btnColor" onclick="cambiarColor()">Cambiar Color</button>
+    </div>
+
+    <div class="seccion-agregar">
+        <label>Agregar parrafos dinamicos:</label><br><br>
+        <input type="text" id="txtInput" placeholder="Escribe algo y presiona Agregar ">
+        <button onclick="agregarParrafo()">Agregar</button>
+        <button onclick="eliminarUltimo()">Eliminar</button>
+    </div>
+
+   
+    <div id="lista"></div>
+    <img id="miImagen" src="img/ave.jpg">
+
+       
+
+
+   
+    <script src="dom_eventos.js"></script>
+    
+</body>
+</html>

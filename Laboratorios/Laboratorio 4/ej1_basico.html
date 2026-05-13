@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 10px;
+        }
+        table td {
+            padding: 8px 14px;
+            border: 1px solid #aaa;
+            background-color: #fff;
+        }
+        
+</style>
+<body>
+    <script >
+
+        var nombre = prompt("Ingrese su nombre");
+        var edad = parseInt(prompt("Ingrese su edad"));
+        var num = parseInt(prompt("Ingrese un número"));
+
+        
+        function clasificar(edad) {
+             if (edad < 18) 
+             return 'Menor de edad';
+             else if (edad < 30) 
+             return 'Joven';
+             else if (edad < 60) 
+             return 'Adulto';
+             else return 'Senior';
+            
+            }   
+
+           
+
+        function parImpar(num) {
+            return (num % 2 === 0) ? 'par' : 'impar';
+        }
+
+
+        function factorial(x) {
+        var f = 1;
+        for (var j = 2; j <= x; j++) f *= j;
+        return f;
+        }
+
+
+        document.write('<h3>Tabla del ' + num + '</h3><table border=1>');
+        for (var i = 1; i <= 10; i++) {
+        document.write('<tr><td>' + num + ' x ' + i + '</td><td>' + (num*i) + '</td></tr>');
+        }
+        document.write('</table>');
+        alert('Hola ' + nombre +
+        '\nClasificación: ' + clasificar(edad) +
+        '\n' + num + '! = ' + factorial(num) +
+        '\n' + num + ' es ' + parImpar(num));
+
+        
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

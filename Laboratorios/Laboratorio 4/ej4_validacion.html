@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .formulario {
+            background-color: #fff;
+            padding: 24px;
+            width: 420px;
+            border: 1px solid #ddd;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 4px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+      
+        .msg-err {
+            display: none;
+            color: #DC2626;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+        .input-grupo {
+            margin-bottom: 14px;
+        }
+        button[type="submit"] {
+            background-color: #1a6679;
+            color: white;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 6px;
+        }
+       
+    </style>
+</head>
+<body>
+    
+     <div class="formulario">
+        <form id="miForm">
+
+          
+            <div class="input-grupo">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" >
+                <span id="err_nombre" class="msg-err">Minimo 3 caracteres</span>
+            </div>
+
+           
+            <div class="input-grupo">
+                <label for="email">Correo electronico:</label>
+                <input type="text" id="email">
+                <span id="err_email" class="msg-err">Formato de email invalido</span>
+            </div>
+
+            
+            <div class="input-grupo">
+                <label for="pass">Contrasena:</label>
+                <input type="password" id="pass" >
+                <span id="err_pass" class="msg-err">Entre 8-10 chars, al menos 1 letra y 1 numero</span>
+            </div>
+
+           
+            <div class="input-grupo">
+                <label for="telefono">Telefono (Bolivia):</label>
+                <input type="text" id="telefono" placeholder="68686868">
+                <span id="err_telefono" class="msg-err">Debe empezar en 6 o 7 y tener 8 digitos</span>
+            </div>
+
+            
+            <div class="input-grupo">
+                <label for="fecha">Fecha de nacimiento (DD/MM/AAAA):</label>
+                <input type="text" id="fecha" placeholder="Ej: 15/03/2026">
+                <span id="err_fecha" class="msg-err">Formato invalido, use DD/MM/AAAA</span>
+            </div>
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    
+    <script src="validar.js"></script>
+
+</body>
+</html>
