@@ -1,0 +1,28 @@
+
+
+<h3 >Selector de Temas</h3>
+
+<div style="margin-bottom:15px;">
+
+   
+    <label><strong>Elige un color:</strong></label>
+    <input type="color" id="inputColor" value="#2c6fad" style="width:50px; height:32px;">
+
+  
+    <button onclick="anadirColor()"style="border:none; padding:6px 12px;border-radius:4px; margin-left:5px;">Añadir Color </button>
+
+    <label style="margin-left:15px;"><strong>Tema del menú:</strong></label>
+    <select id="selectTema" onchange="cambiarTema(this.value)"
+            style="padding:5px; ; border-radius:3px; margin-left:5px;">
+        <option value="claro">Claro</option>
+        <option value="oscuro">Oscuro</option>
+        <option value="contraste">Contraste</option>
+        <option value="pastel">Pastel</option>
+    </select>
+
+</div>
+
+<p>Elige un color y presiona "Añadir Color": </p>
+
+
+<div id="coloresGrid"style="display:grid;gap:10px;"></div>

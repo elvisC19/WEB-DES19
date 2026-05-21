@@ -1,0 +1,33 @@
+<h3 style="padding-bottom:5px; margin-bottom:12px;">
+    Agregar Nueva Receta
+</h3>
+
+<label style="display:block; margin-top:8px;">Titulo:</label>
+<input type="text" id="titulo" style="width:100%; padding:6px; border:1px solid #ccc; ">
+
+<label style="display:block;  margin-top:8px;">Tipo de Receta:</label>
+<select id="selectTipo"
+        style="width:100%; padding:6px; border:1px solid #ccc; ">
+    <option value="">Cargando...</option>
+</select>
+
+<label style="display:block; margin-top:8px;">Preparacion:</label>
+<textarea id="preparacion" rows="4"
+          style="width:100%; padding:6px; border:1px solid #ccc; ">
+</textarea>
+
+<label style="display:block;  margin-top:8px;">Imagen :</label>
+<input type="text" id="imagen" style="width:100%; padding:6px; border:1px solid #ccc; ">
+
+<label style="display:block;  margin-top:8px;">O cargar imagen local:</label>
+<input type="file" id="imagenFile" accept="image/*" style="width:100%;">
+
+<div id="mensajeGuardado" style="margin-top:8px; "></div>
+
+<div style="margin-top:12px; display:flex; gap:8px;">
+    
+    <button onclick="guardarReceta() ">Guardar </button>
+
+    <button onclick="document.getElementById('modalFormulario').style.display='none'">Cancelar</button>
+
+</div>
